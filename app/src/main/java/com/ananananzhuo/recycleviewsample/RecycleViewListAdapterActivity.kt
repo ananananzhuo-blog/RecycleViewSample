@@ -70,19 +70,15 @@ class RecycleViewListAdapterActivity : AppCompatActivity() {
 
     }
 }
-
-
 class CustomListHolder(val binding: ItemTextBinding) : RecyclerView.ViewHolder(binding.root) {
 
 }
-
 data class Name(val name: String)
 class CustomDiffCallback : DiffUtil.ItemCallback<Name>() {
 
     override fun areItemsTheSame(oldItem: Name, newItem: Name): Boolean {
         return oldItem.name == newItem.name
     }
-
 
     override fun areContentsTheSame(oldItem: Name, newItem: Name): Boolean {
         return oldItem == newItem
